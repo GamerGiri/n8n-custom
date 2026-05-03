@@ -1,0 +1,25 @@
+services:
+   - type: web
+     name: n8n
+     runtime: docker
+     env: docker
+     plan: free
+     envVars:
+       - key: N8N_BASIC_AUTH_ACTIVE
+         value: true
+       - key: N8N_BASIC_AUTH_USER
+         value: rugal
+       - key: N8N_BASIC_AUTH_PASSWORD
+         value: rugal100$
+       - key: DB_TYPE
+         value: postgresdb
+       - key: postgres
+         value: n8n
+       - key: DB_POSTGRESDB_HOST
+         value: aws-1-eu-central-1.pooler.supabase.com
+       - key: DB_POSTGRESDB_PORT
+         value: 5432
+       - key: DB_POSTGRESDB_USER
+         value: postgres.hcyfcefrldmbdmyyrimz
+       - key: DB_POSTGRESDB_PASSWORD
+         value: ZC0FpMiXmUTqAXJE
